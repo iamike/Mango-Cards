@@ -13,6 +13,10 @@ namespace Mango_Cards.Web.Controllers
             return View();
         }
 
+        public ActionResult GetMangoCard()
+        {
+            return View();
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

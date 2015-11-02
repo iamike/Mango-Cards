@@ -24,8 +24,14 @@ namespace Mango_Cards.Web
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/bootstrap.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/knockout").Include(
+                "~/Scripts/knockout-3.2.0.js",
+                "~/Scripts/knockout.mapping-latest.js"));
+            //Home
+            bundles.Add(new ScriptBundle("~/bundles/Home").Include(
+                        "~/Scripts/JS/Home.js"));
         }
     }
 }

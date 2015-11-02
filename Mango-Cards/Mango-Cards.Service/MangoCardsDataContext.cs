@@ -10,6 +10,7 @@ namespace Mango_Cards.Service
     {
         public IDbSet<Account> Accounts { get; set; }
         public IDbSet<Company> Companies { get; set; }
+        public IDbSet<CardDemo> CardDemos { get; set; }
 
         IDbSet<TEntity> IDataContext.Set<TEntity>()
         {

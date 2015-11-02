@@ -24,7 +24,7 @@ namespace Mango_Cards.Web
         }
         public static void RegisterTypes(IUnityContainer container)
         {
-
+            container.RegisterType<ICardDemoService, CardDemoService>();
             container.RegisterType<IAccountService, AccountService>();
         }
     }

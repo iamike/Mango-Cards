@@ -12,7 +12,7 @@ namespace MangoCards.Test
         public IDbSet<Company> Companies { get; set; }
         public IDbSet<CardDemo> CardDemos { get; set; }
         public IDbSet<Employee> Employees { get; set; }
-
+        public IDbSet<CardType> CardTypes { get; set; }
         IDbSet<TEntity> IDataContext.Set<TEntity>()
         {
             return this.Set<TEntity>();

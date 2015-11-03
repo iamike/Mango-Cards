@@ -11,6 +11,7 @@ namespace Mango_Cards.Web.Models
         public CardTypeModel CardTypeModel { get; set; }
         public string Name { get; set; }
         public string HtmlCode { get; set; }
+        public string ThumbnailUrl { get; set; }
         public EmployeeModel EmployeeModel { get; set; }
         public DateTime? UpdateTime { get; set; }
         public DateTime CreatedTime { get; set; }

@@ -32,6 +32,9 @@ namespace Mango_Cards.Web
             //Home
             bundles.Add(new ScriptBundle("~/bundles/Home").Include(
                         "~/Scripts/JS/Home.js"));
+            //jquery-qrcode
+            bundles.Add(new ScriptBundle("~/bundles/jqueryqrcode").Include(
+                        "~/Scripts/jquery.qrcode.min.js", "~/Scripts/qrcode.min.js"));
         }
     }
 }

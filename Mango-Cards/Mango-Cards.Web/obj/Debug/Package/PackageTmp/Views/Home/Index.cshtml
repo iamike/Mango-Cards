@@ -6,15 +6,27 @@
 
 <div class="container">
     <h1>Home</h1>
-    <a href="#">
-        获取MangoCard
-    </a>
-    <a href="#">数据中心</a>
+    <button class="btn btn-primary" data-bind="click:viewModel.getMangoCard">获取MangoCard</button>
+    <div id="qrcode"></div> 
     <hr />
-    <h2>invitationcard请柬</h2>
-    <hr />
-    <h2>海报</h2>
-    <hr />
+  
+    <!--循环CardType json类型查看api "/api/CardType/" -->
+    <ul data-bind="foreach:viewModel.cardTypes">
+        <li>
+            <span data-bind="text:Name">
+            </span>
+            <ul data-bind="foreach:SubCardTypeModels">
+                <li>
+                    <span data-bind="text:Name"></span>
+                    <ul data-bind="foreach:CardDemoModels">
+                        <li data-bind="text:Name"></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <!--end-->
+    <!--循环雇员 json类型查看api "/api/Employee/" -->
     <h2>雇员</h2>
     <table class="table">
         <thead>
@@ -23,12 +35,13 @@
                 <th>性别</th>
             </tr>
         </thead>
-        <tbody  data-bind="foreach:viewModel.employees">
+        <tbody data-bind="foreach:viewModel.employees">
             <tr>
                 <td data-bind="text:Name"></td>
                 <td data-bind="text:Gender"></td>
             </tr>
         </tbody>
     </table>
+    <!--end-->
 </div>
 

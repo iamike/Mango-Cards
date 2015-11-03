@@ -9,10 +9,12 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/knockout")
+    
 </head>
 <body>
     @RenderBody()
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryqrcode")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>

@@ -12,39 +12,33 @@ namespace MangoCards.Test
         [TestMethod]
         public void TestMethod1()
         {
-            var db = new MangoCardsDataContext();
-            //初始化
-            var ben = new Employee { Id = Guid.NewGuid(), Name = "Ben", Gender = Gender.男 };
-            var mike = new Employee { Id = Guid.NewGuid(), Name = "Mike", Gender = Gender.男 };
-            var cardTy1 = new CardType
-            {
-                Id=Guid.NewGuid(),
-                Name="请帖",
+            //var db = new MangoCardsDataContext();
+            ////初始化
+          
+            //var cardTy3 = new CardType {Id = Guid.NewGuid(), Name = "海报",};
+            //var cardTy4 = new CardType
+            //{
+            //    Id = Guid.NewGuid(),
+            //    Name = "优惠券",
+            //    Parent = cardTy3,
+            //    CardDemos = new List<CardDemo>
+            //    {
+            //        new CardDemo
+            //        {
+            //            Id = Guid.NewGuid(),
+            //            Name = "KFC优惠券",
 
-            };
-            var cardTy3 = new CardType
-            {
-                Id = Guid.NewGuid(),
-                Name = "海报",
+            //        },
+            //        new CardDemo
+            //        {
+            //            Id = Guid.NewGuid(),
+            //            Name = "MM优惠券",
 
-            };
-            var cardTy2 = new CardType
-            {
-                Id = Guid.NewGuid(),
-                Name = "婚礼",
-                Parent = cardTy1,
-                CardDemos = new List<CardDemo> { new CardDemo {
-                    Id=Guid.NewGuid(),
-                    Name="婚礼1",
-                    Employee=mike,
-                },new CardDemo { Id=Guid.NewGuid(),
-                    Name="婚礼2",
-                    Employee=ben
-                } }
-            };
-            db.Employees.Add(ben);
-            db.Employees.Add(mike);
-            db.SaveChanges();
+            //        }
+            //    }
+            //};
+            //db.CardTypes.Add(cardTy4);
+            //db.SaveChanges();
         }
     }
 }

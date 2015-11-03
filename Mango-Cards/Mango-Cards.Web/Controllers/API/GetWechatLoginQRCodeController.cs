@@ -13,10 +13,10 @@ namespace Mango_Cards.Web.Controllers.API
     {
         public object Get()
         {
-            var backUrl = HttpUtility.UrlEncode("http://card.mangoeasy.com/home/about");
+            var backUrl = HttpUtility.UrlEncode("http://card.mangoeasy.com/home/loginconfirmation");
             var weChartloginUrl =
                 string.Format(
-                    "https://open.weixin.qq.com/connect/oauth2/authorize?appid={0}&redirect_uri={1}&response_type=code&scope=snsapi_base&state={2}#wechat_redirect",
+                    "https://open.weixin.qq.com/connect/oauth2/authorize?appid={0}&redirect_uri={1}&response_type=code&scope=snsapi_userinfo&state={2}#wechat_redirect",
                     ConfigurationManager.AppSettings["AppId"], backUrl,  Guid.NewGuid().ToString().Replace("-",""));
             
             return weChartloginUrl;

@@ -23,6 +23,10 @@ namespace Mango_Cards.Web.Controllers
 
             return View();
         }
+        public ActionResult LoginConfirmation()
+        {
+            return View();
+        }
 
         public ActionResult Contact()
         {

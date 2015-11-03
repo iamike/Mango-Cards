@@ -3,6 +3,8 @@
     ViewBag.Title = "GetMangoCard";
     Layout = "~/Views/Shared/_EmptyLayout.cshtml";
 }
+@Scripts.Render("~/bundles/GetMangoCard")
+<button class="btn btn-primary" data-bind="click:viewModel.getMangoCard">获取MangoCard</button>
+<div id="qrcode"></div> 
 
-<h2>注册登录</h2>
-
+<div id="logs"></div>

@@ -4,12 +4,6 @@
         employees: ko.observableArray(),
     }
 };
-Home.viewModel.getMangoCard= function() {
-    $.get("/api/GetWechatLoginQRCode/", function (result) {
-        $('#qrcode').empty();
-        $('#qrcode').qrcode(result);
-    });
-};
 $(function () {
     ko.applyBindings(Home);
     $.get("/api/CardType/", function (data) {

@@ -224,6 +224,9 @@
     <Compile Include="Controllers\API\EmployeeController.cs" />
     <Compile Include="Controllers\API\CardDemoController.cs" />
     <Compile Include="Controllers\API\GetWechatLoginQRCodeController.cs" />
+    <Compile Include="Controllers\API\CometController.cs" />
+    <Compile Include="Controllers\API\HeaderSettingController.cs" />
+    <Compile Include="Controllers\API\LoginConfirmationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -278,7 +281,9 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\JS\GetMangoCard.js" />
     <Content Include="Scripts\JS\Home.js" />
+    <Content Include="Scripts\JS\LoginConfirmation.js" />
     <Content Include="Scripts\knockout-3.2.0.js" />
     <Content Include="Scripts\knockout.mapping-latest.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
@@ -326,6 +331,7 @@
     <Content Include="Views\Shared\_EmptyLayout.cshtml" />
     <Content Include="Views\Home\GetMangoCard.cshtml" />
     <Content Include="Scripts\qrcode.min.js.map" />
+    <Content Include="Views\Home\LoginConfirmation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

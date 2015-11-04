@@ -28,6 +28,8 @@ namespace Mango_Cards.Web
             container.RegisterType<ICardTypeService, CardTypeService>();
             container.RegisterType<IEmployeeService, EmployeeService>();
             container.RegisterType<IAccountService, AccountService>();
+            container.RegisterType<ILoginLogService, LoginLogService>();
+            container.RegisterType<IWeChatUserService, WeChatUserService>();
         }
     }
 }

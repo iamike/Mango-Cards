@@ -4,19 +4,21 @@
         employees: ko.observableArray(),
     }
 };
+
 $(function () {
     ko.applyBindings(GetMangoCard);
-    $.get("/api/GetWechatLoginQRCode/", function (result) {
+    $.get("/api/GetWechatLoginQRCode/", function (result) {        
         $('#qrcode').empty();
-        $('#qrcode').qrcode(result);       
+        $('#qrcode').qrcode(result.weChartloginUrl);
+        function longPolling() {
+            $.get('/comet/LongPolling/', { state: result.state }, function (data) {
+                if (data.State == result.state) {
+                    location.href = "http://www.baidu.com" //location.href实现客户端页面的跳转  
+                }
+                longPolling();
+            })           
+        }
+        longPolling();
     });
-    function longPolling() {
-        $.getJSON('/comet/LongPolling', function (data) {
-            if (data.d) {
-                $('#logs').append(data.d + "<br/>");
-            }
-            longPolling();
-        });
-    }
-    longPolling();
+    
 });

@@ -240,6 +240,7 @@
     <Compile Include="Models\EmployeeModel.cs" />
     <Compile Include="Models\Enum\Gender.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\LoginLogModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MangoCardModel.cs" />
     <Compile Include="Models\OrderModel.cs" />

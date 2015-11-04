@@ -25,8 +25,22 @@ LoginConfirmation.viewModel.Confirmation = function () {
             },
             success: function (xmlDoc, textStatus, xhr) {
                 if (xhr.status == 200) {
+                    var loginlomodel = {
+                        State: model.state,
+                        WeChatUserModel: {          
+                            OpenId :xhr.responseJSON.openid,
+                            NickName: xhr.responseJSON.nickname,
+                            Gender :xhr.responseJSON.sex,                           
+                            City: xhr.responseJSON.city,
+                            Province: xhr.responseJSON.province,
+                            Country: xhr.responseJSON.country,
+                            Headimgurl: xhr.responseJSON.headimgurl,
+                        }
+                    }
+                    $.post('/api/LoginConfirmation/', loginlomodel, function (result) {
+                        alert(result.WeChatUserModel.openId);
+                    })
                   
-                    alert(JSON.stringify(xhr.responseJSON));
                     
                 }
             }
@@ -35,5 +49,5 @@ LoginConfirmation.viewModel.Confirmation = function () {
 };
 $(function () {
     ko.applyBindings(LoginConfirmation);
-   
+    $('#state').text(getQueryStringByName("state"))
 });

@@ -70,6 +70,8 @@
     <Compile Include="Services\IEmployeeService.cs" />
     <Compile Include="Services\ICardDemoService.cs" />
     <Compile Include="Services\IDataContext.cs" />
+    <Compile Include="Services\ILoginLogService.cs" />
+    <Compile Include="Services\IWeChatUserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

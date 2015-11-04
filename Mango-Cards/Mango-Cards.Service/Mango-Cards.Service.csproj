@@ -57,6 +57,8 @@
     <Compile Include="Services\CardTypeService.cs" />
     <Compile Include="Services\EmployeeService.cs" />
     <Compile Include="Services\CardDemoService.cs" />
+    <Compile Include="Services\LoginLogService.cs" />
+    <Compile Include="Services\WeChatUserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Mango-Cards.Library\Mango-Cards.Library.csproj">

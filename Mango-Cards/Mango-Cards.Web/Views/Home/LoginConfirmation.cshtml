@@ -11,7 +11,8 @@
     {
         if (!string.IsNullOrEmpty(queryString["Code"]))
         {
-            <h1>@queryString["Code"]</h1>
+            <h2>@queryString["Code"]</h2>
+            <h2 id="state"></h2>
             <button class="btn btn-primary" data-bind="click:viewModel.Confirmation">确认登录</button>         
 
         }

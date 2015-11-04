@@ -6,7 +6,8 @@
 
 <div class="container">
     <h1>Home</h1>
-    <a href="~/Home/GetMangoCard/">获取MangoCard</a>   
+    <button class="btn btn-primary" data-bind="click:viewModel.getMangoCard">获取MangoCard</button>
+    @*<img data-bind="attr:{src:viewModel.loginQRCode},visible:viewModel.loginQRCode()!=null" alt="" />*@
     <hr />
   
     <!--循环CardType json类型查看api "/api/CardType/" -->

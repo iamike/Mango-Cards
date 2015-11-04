@@ -10,13 +10,13 @@ $(function () {
         $('#qrcode').empty();
         $('#qrcode').qrcode(result);       
     });
-    function long_polling() {
+    function longPolling() {
         $.getJSON('/comet/LongPolling', function (data) {
             if (data.d) {
                 $('#logs').append(data.d + "<br/>");
             }
-            long_polling();
+            longPolling();
         });
     }
-    long_polling();
+    longPolling();
 });

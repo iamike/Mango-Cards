@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\CardDemo.cs" />
+    <Compile Include="Models\LoginLog.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\PvData.cs" />
     <Compile Include="Models\CardReview.cs" />

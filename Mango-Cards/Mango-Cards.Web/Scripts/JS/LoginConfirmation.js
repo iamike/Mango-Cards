@@ -12,7 +12,8 @@ function getQueryStringByName(name) {
 }
 LoginConfirmation.viewModel.Confirmation = function () {
     var model = {
-        code: getQueryStringByName("code")
+        code: getQueryStringByName("code"),
+        state: getQueryStringByName("state")
     };
     $.get('/api/HeaderSetting/', function (base64) {
         $.ajax({

@@ -2,16 +2,16 @@
 @{
     ViewBag.Title = "LoginConfirmation";
     Layout = "~/Views/Shared/_EmptyLayout.cshtml";
-    var QueryString = Request.QueryString;
+    var queryString = Request.QueryString;
 }
 @Scripts.Render("~/bundles/LoginConfirmation")
 <h2>LoginConfirmation</h2>
 @{
-    if (QueryString != null)
+    if (queryString != null)
     {
-        if (!string.IsNullOrEmpty(QueryString["Code"]))
+        if (!string.IsNullOrEmpty(queryString["Code"]))
         {
-            <h1>@QueryString["Code"]</h1>
+            <h1>@queryString["Code"]</h1>
             <button class="btn btn-primary" data-bind="click:viewModel.Confirmation">确认登录</button>         
 
         }

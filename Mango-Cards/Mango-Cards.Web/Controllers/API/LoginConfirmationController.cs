@@ -52,15 +52,19 @@ namespace Mango_Cards.Web.Controllers.API
                     _weChatUserService.Update();
                 }
                 var loginLogId = Guid.NewGuid();
-                _loginLogService.Insert(new LoginLog
+                if (_loginLogService.GetLoginLog(model.State) == null)
                 {
-                    Id = loginLogId,
-                    State = model.State,
-                    CreateTime = DateTime.Now,
-                    WeChatUser_Id = wecharuser.Id
-                });
-                model.CreateTime = DateTime.Now;
-                model.Id = loginLogId;
+                    _loginLogService.Insert(new LoginLog
+                    {
+                        Id = loginLogId,
+                        State = model.State,
+                        CreateTime = DateTime.Now,
+                        WeChatUser_Id = wecharuser.Id
+                    });
+                    model.CreateTime = DateTime.Now;
+                    model.Id = loginLogId;
+                }
+                
                 return model;
             }
             return null;

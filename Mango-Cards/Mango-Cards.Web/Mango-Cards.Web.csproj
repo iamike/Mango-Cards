@@ -227,11 +227,14 @@
     <Compile Include="Controllers\API\CometController.cs" />
     <Compile Include="Controllers\API\HeaderSettingController.cs" />
     <Compile Include="Controllers\API\LoginConfirmationController.cs" />
+    <Compile Include="Controllers\API\WeChatUserController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\Filters\Extensions.cs" />
+    <Compile Include="Infrastructure\UserService.cs" />
     <Compile Include="Models\AccountModel.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CardDemoModel.cs" />

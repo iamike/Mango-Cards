@@ -4,13 +4,13 @@
         employees: ko.observableArray(),
         wechatuser: {
             Id: ko.observable(),
-            NickName: ko.observableArray(),
-            Gender: ko.observableArray(),
-            Language: ko.observableArray(),
-            City: ko.observableArray(),
-            Province: ko.observableArray(),
-            Country: ko.observableArray(),
-            Headimgurl: ko.observableArray(),
+            NickName: ko.observable(),
+            Gender: ko.observable(),
+            Language: ko.observable(),
+            City: ko.observable(),
+            Province: ko.observable(),
+            Country: ko.observable(),
+            Headimgurl: ko.observable(),
         }
     }
 };

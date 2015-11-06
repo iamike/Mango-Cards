@@ -227,7 +227,9 @@
     <Compile Include="Controllers\API\CometController.cs" />
     <Compile Include="Controllers\API\HeaderSettingController.cs" />
     <Compile Include="Controllers\API\LoginConfirmationController.cs" />
+    <Compile Include="Controllers\API\MyCardsController.cs" />
     <Compile Include="Controllers\API\WeChatUserController.cs" />
+    <Compile Include="Controllers\CardsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -235,7 +237,6 @@
     </Compile>
     <Compile Include="Infrastructure\Filters\Extensions.cs" />
     <Compile Include="Infrastructure\UserService.cs" />
-    <Compile Include="Models\AccountModel.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CardDemoModel.cs" />
     <Compile Include="Models\CardTypeModel.cs" />
@@ -285,6 +286,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\JS\Cards.js" />
     <Content Include="Scripts\JS\GetMangoCard.js" />
     <Content Include="Scripts\JS\Home.js" />
     <Content Include="Scripts\JS\LoginConfirmation.js" />
@@ -298,12 +300,15 @@
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
@@ -333,9 +338,10 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_EmptyLayout.cshtml" />
-    <Content Include="Views\Home\GetMangoCard.cshtml" />
+    <Content Include="Views\Cards\GetMangoCard.cshtml" />
     <Content Include="Scripts\qrcode.min.js.map" />
     <Content Include="Views\Home\LoginConfirmation.cshtml" />
+    <Content Include="Views\Cards\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

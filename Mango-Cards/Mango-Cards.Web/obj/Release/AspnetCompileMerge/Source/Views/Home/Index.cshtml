@@ -3,13 +3,16 @@
     Layout = "~/Views/Shared/_EmptyLayout.cshtml";
 }
 @Scripts.Render("~/bundles/Home")
-
 <div class="container">
     <h1>Home</h1>
-    <button class="btn btn-primary" data-bind="click:viewModel.getMangoCard">获取MangoCard</button>
-    @*<img data-bind="attr:{src:viewModel.loginQRCode},visible:viewModel.loginQRCode()!=null" alt="" />*@
+    <a href="~/Cards/GetMangoCard/" data-bind="visible:viewModel.wechatuser.Id()==null">获取MangoCard</a>
+    <a href="~/Cards/">我的Mango Cards</a>
+    <div data-bind="visible:viewModel.wechatuser.Id()!=null">
+        <p data-bind="text:viewModel.wechatuser.NickName"></p>
+        <img data-bind="attr:{src:viewModel.wechatuser.Headimgurl}" alt="" />
+    </div>
     <hr />
-  
+
     <!--循环CardType json类型查看api "/api/CardType/" -->
     <ul data-bind="foreach:viewModel.cardTypes">
         <li>
@@ -44,4 +47,3 @@
     </table>
     <!--end-->
 </div>
-

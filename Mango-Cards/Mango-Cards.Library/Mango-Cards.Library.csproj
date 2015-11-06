@@ -50,7 +50,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Account.cs" />
     <Compile Include="Models\CardDemo.cs" />
     <Compile Include="Models\LoginLog.cs" />
     <Compile Include="Models\Order.cs" />
@@ -65,7 +64,6 @@
     <Compile Include="Models\ShareTime.cs" />
     <Compile Include="Models\WeChatUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\IAccountService.cs" />
     <Compile Include="Services\ICardTypeService.cs" />
     <Compile Include="Services\IEmployeeService.cs" />
     <Compile Include="Services\ICardDemoService.cs" />

@@ -1,4 +1,6 @@
-﻿using System.Net;
+﻿using System;
+using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Mango_Cards.Library.Services;
@@ -10,20 +12,18 @@ namespace Mango_Cards.Web.Controllers
 {
     public class HomeController : Controller
     {
-         private readonly ILoginLogService _loginLogService;
-
-         public HomeController(ILoginLogService loginLogService)
+        private readonly IWeChatUserService _weChatUserService;
+        public HomeController( IWeChatUserService weChatUserService)
         {
-            _loginLogService = loginLogService;
-            
+            _weChatUserService = weChatUserService;
         }
         public ActionResult Index()
         {
-            return View();
-        }
-
-        public ActionResult GetMangoCard()
-        {
+            ////test
+            //var authenticationManager = HttpContext.GetOwinContext().Authentication;
+            //var identity = UserService.CreateIdentity(_weChatUserService.GetWeChatUser(new Guid("0DDAFD2A-CEDC-48B0-9ADC-E91393AF4A50")), DefaultAuthenticationTypes.ApplicationCookie);
+            //authenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+            //authenticationManager.SignIn(new AuthenticationProperties(), identity);
             return View();
         }
         public ActionResult About()

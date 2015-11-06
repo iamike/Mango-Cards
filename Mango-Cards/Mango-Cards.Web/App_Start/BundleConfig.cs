@@ -41,6 +41,9 @@ namespace Mango_Cards.Web
             //LoginConfirmation
             bundles.Add(new ScriptBundle("~/bundles/LoginConfirmation").Include(
                       "~/Scripts/JS/LoginConfirmation.js"));
+            //Cards
+            bundles.Add(new ScriptBundle("~/bundles/Cards").Include(
+                    "~/Scripts/JS/Cards.js"));
         }
     }
 }

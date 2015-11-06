@@ -3,7 +3,6 @@ using Mango_Cards.Web.Infrastructure;
 using Mango_Cards.Web.Models;
 using System.Web.Mvc;
 using System.Web;
-using Mango_Cards.Web.Models.Enum;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 
@@ -12,7 +11,7 @@ namespace Mango_Cards.Web.Controllers.API
     public class CometController : AsyncController
     {
         private readonly ILoginLogService _loginLogService;
-        public CometController(ILoginLogService loginLogService, IWeChatUserService weChatUserService)
+        public CometController(ILoginLogService loginLogService)
         {
             _loginLogService = loginLogService;
         }

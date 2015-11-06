@@ -11,7 +11,6 @@ namespace Mango_Cards.Library.Services
 {
     public interface IDataContext : IObjectContextAdapter, IDisposable
     {
-        IDbSet<Account> Accounts { get; set; }
         IDbSet<Company> Companies { get; set; }
         IDbSet<CardDemo> CardDemos { get; set; }
         IDbSet<Employee> Employees { get; set; }

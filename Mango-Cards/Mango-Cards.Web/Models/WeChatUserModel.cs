@@ -17,6 +17,13 @@ namespace Mango_Cards.Web.Models
         public string Province { get; set; }
         public string Country { get; set; }
         public string Headimgurl { get; set; }
+        /// <summary>
+        /// 手机号码
+        /// </summary>
+        public string PhoneNum { get; set; }
+        public string Email { get; set; }
+        public MangoCardModel[] MangoCards { get; set; }
+        public CompanyModel CompanyModel { get; set; }
         public DateTime? UpdateTime { get; set; }
         public DateTime CreatedTime { get; set; }
         public bool IsDeleted { get; set; }

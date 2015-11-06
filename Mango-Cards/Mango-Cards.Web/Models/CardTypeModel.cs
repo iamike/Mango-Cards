@@ -11,5 +11,6 @@ namespace Mango_Cards.Web.Models
         public string Name { get; set; }
         public List<CardTypeModel> SubCardTypeModels { get; set; }
         public CardDemoModel[] CardDemoModels { get; set; }
+        public MangoCardModel[] MangoCardModels { get; set; }
     }
 }

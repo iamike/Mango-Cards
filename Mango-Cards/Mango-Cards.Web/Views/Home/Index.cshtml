@@ -5,7 +5,8 @@
 @Scripts.Render("~/bundles/Home")
 <div class="container">
     <h1>Home</h1>
-    <a href="~/Home/GetMangoCard/" >获取MangoCard</a>
+    <a href="~/Cards/GetMangoCard/" data-bind="visible:viewModel.wechatuser.Id()==null">获取MangoCard</a>
+    <a href="~/Cards/">我的Mango Cards</a>
     <div data-bind="visible:viewModel.wechatuser.Id()!=null">
         <p data-bind="text:viewModel.wechatuser.NickName"></p>
         <img data-bind="attr:{src:viewModel.wechatuser.Headimgurl}" alt="" />

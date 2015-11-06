@@ -13,7 +13,10 @@ namespace Mango_Cards.Library.Models
         public string Description { get; set; }
         public string ThumbnailUrl { get; set; }
         public virtual CardType CardType { get; set; }
-        public virtual Account Account { get; set; }
+        /// <summary>
+        /// 持有人
+        /// </summary>
+        public virtual WeChatUser WeChatUser { get; set; }
         public string HtmlCode { get; set; }
         /// <summary>
         /// 是否发布

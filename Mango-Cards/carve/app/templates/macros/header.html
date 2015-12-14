@@ -1,4 +1,29 @@
 {% macro mode(transparency='transparent',darken='dark') %}
+<!-- Head Section -->
+<section class="small-section bg-dark-lighter">
+    <div class="relative container align-left">
+
+        <div class="row">
+
+            <div class="col-md-8">
+                <h1 class="hs-line-11 font-alt mb-20 mb-xs-0">My Account</h1>
+                <div class="hs-line-4 font-alt">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing
+                </div>
+            </div>
+
+            <div class="col-md-4 mt-30">
+                <div class="mod-breadcrumbs font-alt align-right">
+                    <a href="#">Home</a>&nbsp;/&nbsp;<a href="#">Pages</a>&nbsp;/&nbsp;<span>My Account</span>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- End Head Section -->
+
 <!-- Navigation panel -->
 <nav class="main-nav stick-fixed
 {%if transparency == 'transparent' %} transparent {% endif %}
@@ -9,10 +34,6 @@
       <a href="#top" class="logo">
         <img src="images/logo-white.png" alt="" />
       </a>
-    </div>
-    <div class="slogan">
-      <p>奕欧来EUROPE打造成功男士新形象</p>
-      <p>到欧洲九大精品购物村寻找你的时尚灵感</p>
     </div>
     <div class="mobile-nav">
       <i class="fa fa-bars"></i>

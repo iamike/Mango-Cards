@@ -1,8 +1,6 @@
-{% macro mode(transparency='transparent',darken='dark') %}
+{% macro mode(className) %}
 <!-- Navigation panel -->
-<nav class="main-nav stick-fixed
-{%if transparency == 'transparent' %} transparent {% endif %}
-{%if darken == 'dark' %} dark {% endif %}">
+<nav class="main-nav {%if className %} {{className}} {% endif %}">
   <div class="full-wrapper relative clearfix">
     <!-- Logo ( * your text or image into link tag *) -->
     <div class="nav-logo-wrap local-scroll">

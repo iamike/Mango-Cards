@@ -48,18 +48,9 @@
 
   <!-- Page Wrap -->
   <div class="page" id="top">
-    {% import 'macros/header.html' as header %}
-    {{header.mode('transparent','dark')}}
-    {% include "partials/header.html" %}
-
-    {% block content %}{% endblock %}
-
-    {% include "partials/footer.html" %}
-
+    {% block content %} {% endblock %}
   </div>
   <!-- End Page Wrap -->
-
-
 
   <!-- build:js scripts/vendor.js -->
   <!-- bower:js -->
@@ -67,9 +58,6 @@
 
   <!-- endbower -->
   <!-- endbuild -->
-
-
-
 
   <!-- build:js scripts/plugins.js -->
   <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>

@@ -30,19 +30,7 @@
     $(document).ready(function(){
 
 
-      var BV = new $.BigVideo({
-          // If you want to use a single mp4 source, set as true
-          useFlashForFirefox:true,
-          // If you are doing a playlist, the video won't play the first time
-          // on a touchscreen unless the play event is attached to a user click
-          forceAutoplay:false,
-          controls:false,
-          doLoop:false,
-          container:$('#homeVideoBg'),
-          shrinkable:false
-      });
-      BV.init();
-      BV.show('http://vjs.zencdn.net/v/oceans.mp4');
+
 
         $(window).trigger("resize");
 
@@ -525,13 +513,31 @@
           speed: 4000 // How many milliseconds until the next word show.
         });
 
-        if (!($("html").hasClass("mobile"))){
-            $(".player").mb_YTPlayer();
-        };
+        //hero background video
+        initHeroBgVideo();
+
 
     });
 })(jQuery);
 
+function initHeroBgVideo(videoRoot){
+
+  if ($(".fullscreen-bg").length) {
+    var BV = new $.BigVideo({
+        // If you want to use a single mp4 source, set as true
+        useFlashForFirefox:true,
+        // If you are doing a playlist, the video won't play the first time
+        // on a touchscreen unless the play event is attached to a user click
+        forceAutoplay:false,
+        controls:false,
+        doLoop:true,
+        container:$('#homeVideoBg'),
+        shrinkable:false
+    });
+    BV.init();
+    BV.show('/video/Sparks/MP4/Sparks.mp4');
+  }
+}
 /* ---------------------------------------------
      Sliders
    --------------------------------------------- */
@@ -635,7 +641,7 @@ function initPageSliders(){
         });
 
 
-        if ($(".owl-carousel").lenth) {
+        if ($(".owl-carousel").length) {
             var owl = $(".owl-carousel").data('owlCarousel');
             owl.reinit();
         }

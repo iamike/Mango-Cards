@@ -24,19 +24,27 @@
         }
 
     });
-    //jQuery is required to run this code
-    $( document ).ready(function() {
-
-        scaleVideoContainer();
-
-        initBannerVideoSize('.video-container .poster img');
-        initBannerVideoSize('.video-container .filter');
-        initBannerVideoSize('.video-container video');
 
 
 
+    $(document).ready(function(){
 
-      $(window).trigger("resize");
+
+      var BV = new $.BigVideo({
+          // If you want to use a single mp4 source, set as true
+          useFlashForFirefox:true,
+          // If you are doing a playlist, the video won't play the first time
+          // on a touchscreen unless the play event is attached to a user click
+          forceAutoplay:false,
+          controls:false,
+          doLoop:false,
+          container:$('#homeVideoBg'),
+          shrinkable:false
+      });
+      BV.init();
+      BV.show('http://vjs.zencdn.net/v/oceans.mp4');
+
+        $(window).trigger("resize");
 
         init_classic_menu();
         init_lightbox();
@@ -57,10 +65,6 @@
         init_classic_menu_resize();
         js_height_init();
 
-        scaleVideoContainer();
-        scaleBannerVideoSize('.video-container .poster img');
-        scaleBannerVideoSize('.video-container .filter');
-        scaleBannerVideoSize('.video-container video');
     });
 
 
@@ -443,6 +447,7 @@
         $(".video, .resp-media, .blog-media").fitVids();
         $(".work-full-media").fitVids();
 
+
     }
 
 
@@ -519,6 +524,11 @@
           separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
           speed: 4000 // How many milliseconds until the next word show.
         });
+
+        if (!($("html").hasClass("mobile"))){
+            $(".player").mb_YTPlayer();
+        };
+
     });
 })(jQuery);
 
@@ -690,6 +700,7 @@ function js_height_init(){
     (function($){
         $(".js-height-full").height($(window).height());
         $(".js-height-parent").each(function(){
+          console.log($(this).parent().first().height());
             $(this).height($(this).parent().first().height());
         });
     })(jQuery);

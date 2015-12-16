@@ -89,7 +89,11 @@ gulp.task('fonts', () => {
     .pipe(gulp.dest('.tmp/fonts'))
     .pipe(gulp.dest('dist/fonts'));
 });
-
+gulp.task('videos', () => {
+  return gulp.src('app/video/**/*')
+    .pipe(gulp.dest('.tmp/video'))
+    .pipe(gulp.dest('dist/video'));
+});
 gulp.task('extras', () => {
   return gulp.src([
     'app/*.*',

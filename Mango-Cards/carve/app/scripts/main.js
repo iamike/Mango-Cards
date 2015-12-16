@@ -24,10 +24,19 @@
         }
 
     });
+    //jQuery is required to run this code
+    $( document ).ready(function() {
 
-    $(document).ready(function(){
+        scaleVideoContainer();
 
-        $(window).trigger("resize");
+        initBannerVideoSize('.video-container .poster img');
+        initBannerVideoSize('.video-container .filter');
+        initBannerVideoSize('.video-container video');
+
+
+
+
+      $(window).trigger("resize");
 
         init_classic_menu();
         init_lightbox();
@@ -48,6 +57,10 @@
         init_classic_menu_resize();
         js_height_init();
 
+        scaleVideoContainer();
+        scaleBannerVideoSize('.video-container .poster img');
+        scaleBannerVideoSize('.video-container .filter');
+        scaleBannerVideoSize('.video-container video');
     });
 
 

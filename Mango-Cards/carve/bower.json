@@ -20,7 +20,10 @@
     "isotope": "~2.2.2",
     "smoothscroll": "~0.1.0",
     "jquery.scrollTo": "~2.1.2",
-    "jquery.localScroll": "~1.4.0"
+    "jquery.localScroll": "~1.4.0",
+    "knockout": "~3.4.0",
+    "knockout.mapping": "https://github.com/SteveSanderson/knockout.mapping.git#~2.4.1",
+    "jquery-qrcode": "https://github.com/lrsjng/jquery-qrcode.git#~0.12.0"
   },
   "overrides": {
     "bootstrap-sass": {
